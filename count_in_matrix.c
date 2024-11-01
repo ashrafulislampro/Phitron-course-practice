@@ -6,6 +6,7 @@ int main()
     scanf("%d%d%d", &N, &M, &X);
     int arr[N][M];
     int arr2[X];
+    int freq[1001] = {0};
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < M; j++)
@@ -13,25 +14,23 @@ int main()
             scanf("%d", &arr[i][j]);
         }
     }
+
     for (int i = 0; i < X; i++)
     {
-        // int val;
         scanf("%d", &arr2[i]);
-        // arr2[val] = 0;
     }
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < M; j++)
         {
-            int res = arr[i][j];
-            if (arr[i]);
+            freq[arr[i][j]]++;
         }
     }
 
     int len = sizeof(arr2) / sizeof(arr2[0]);
     for (int i = 0; i < len; i++)
     {
-        printf("%d\n", arr2[i]);
+        printf("%d\n", freq[arr2[i]]);
     }
     return 0;
 }
